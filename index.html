@@ -9,15 +9,17 @@ body {
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f8f8f8;
+            background-color: #E6E6FA;
         }
 
         header {
-            background-color: #007bff;
-            color: #fff;
+            background-color: #E6E6FA;
+            color: #000000;
             padding: 20px;
             display: flex;
             align-items: center;
+            margin-top: 15px;
+            margin-bottom: 15px;
         }
 
         header img {
@@ -33,7 +35,7 @@ body {
         }
 
         nav li {
-            margin-right: 20px;
+            margin-right: 50px;
         }
 
         nav li:last-child {
@@ -41,14 +43,14 @@ body {
         }
 
         nav a {
-            color: #fff;
+            color: #000000;
             text-decoration: none;
             font-size: 16px;
             transition: color 0.3s;
         }
 
         nav a:hover {
-            color: #e5e5e5;
+            color: #666565;
         }
 
         main {
@@ -446,484 +448,145 @@ body {
 <body>
     <!-- Header Section -->
     <header>
-        <img src="online-course.png" alt="Logo">
+        <img src="elearning.png" alt="Logo" style="margin-left: 200px;">
         <nav>
             <ul>
-                <li style="margin-left: 20px;"><a href="#" onclick="toggleHome()">Home</a></li>
+                <li style="margin-left: 200px;"><a href="#" onclick="toggleHome()">Home</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropbtn">Courses</a>
                     <div class="dropdown-content">
-                        <a href="#" onclick="toggleNews()">Exfiltration Over C&C Channel</a>
-                        <a href="#" onclick="toggleContainer2()">Automated Collection</a>
-                        <a href="#" onclick="toggleContainer3()">Exploit Public-Facing Application</a>
-                        <a href="#" onclick="toggleContainer4()">Spearphishing Attachment</a>
-                        <a href="#" onclick="toggleContainer5()">RDP Exploitation</a>
+                        <a href="E&c.html">51% Attack</a>
+                        <a href="E&c.html">Double-Spend Attack</a>
+                        <a href="E&c.html">Reentrancy Attack</a>
+                        <a href="E&c.html">Denial-of-Service (DoS) Attack</a>
+                        <a href="E&c.html">Man-in-the-Middle Attack</a>
                     </div>
-                </li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <div>
+                    <button style="width: 100px; margin-left: 20px; height: 45px; color: white; background-color: #001F3F;"> Explore </button>
+                </div>
             </ul>
         </nav>
     </header>
 
     <!-- Main Content Section -->
     <main id="home-content">
-        <h1>Learn Fintech Attack techniques</h1>
-        <p>Start your journey to become a Security expert.</p>
+        
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div style="width: 50%; margin-right: 10%;"> <!-- Adjust width and margin as needed -->
+                <h1 style="color: #00796B; font-family: Inter; font-size: 35px; font-weight: bold;"> Securing Tomorrow: <br> Explore Blockchain <br> Vulnerabilities</h1>
+        
+                <p style="color: #000000; font-family: Inter; font-size: 14px; ;">Expert Insight: Gain critical knowledge to address <br> and neutralize blockchain vulnerabilities with our <br> Comprehensive Learning Modules.</p>
+        
+                <button style="width: 150px; margin-top: 20px; margin-left: 20px; height: 45px; color: white; background-color: #001F3F;"> Get Started </button>
+            </div>
+            <img src="blockchain.png" alt="Blockchain Image" style="width: 50%; height: auto;">
+        </div>
 
         <!-- Course Information Section -->
-        <section>
+
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 20%;">
+            <div style="width: 50%; margin-right: 10%;"> <!-- Adjust width and margin as needed -->
+                <h1 style="color: #000000; font-family: Inter; font-size: 35px;"> Introduction</h1>
+        
+                <p style="color: #000000; font-family: Inter; font-size: 14px;">
+                    Blockchain has gained substantial prominence in the recent year 
+                    and its considered the backbone of digital cryptocurrency. 
+                    This learning platform undertake a 
+                    comprehensive analysis of the vulnerabilities 
+                    inherent in blockchain system, focusing on both technical and social-economic aspect. <br>
+                </p>
+            </div>
+            <img src="Intro.png" alt="Blockchain Image" style="width: 50%; height: auto;">
+        </div>
+
+
+        <section style="margin-top:  10%;">
             <h2>Course Information</h2>
             <ul>
-                <li><a href="#course1">Exfiltration Over Command and Control Channel</a></li>
-                <li><a href="#course2">Automated Collection</a></li>
-                <li><a href="#course3">Exploit Public-Facing Application</a></li>
-                <li><a href="#course4">Spearphishing Attachment</a></li>
-                <li><a href="#course5">Remote Desktop Protocol (RDP) Exploitation</a></li>
+                <li><a href="#course1">1. 51% Attack</a></li>
+                <li><a href="#course2">2. Double-Spend Attack</a></li>
+                <li><a href="#course3">3. Reentrancy Attack</a></li>
+                <li><a href="#course4">4. Denial-of-Service (DoS) Attack</a></li>
+                <li><a href="#course5">5. Man-in-the-Middle Attack</a></li>
             </ul>
         </section>
-        
+        	
         
         
         <!-- Lessons Section -->
         <section>
-            <h2>Lessons</h2>
+            <h2>Lessons (Introduction to Modules 1 to 5: Blockchain Vulnerability Series)</h2>
 
             <!-- P1:L1  -->
             <article id="course1" class="lesson-box">
-                <h3>Exfiltration Over Command and Control Channel</h3>
+                <h3>Module 1: 51% Attack</h3>
                 <p style="text-align: justify; padding: 10px;">
                     <strong>Overview:</strong>
-                    Exfiltration over a Command and Control (C&C) channel is a technique employed by cybercriminals to steal sensitive data from a compromised system and transmit it to an external location under their control. The C&C channel serves as the communication pathway for attackers to receive stolen data and issue further commands to the compromised system. Understanding this technique is crucial as it allows learners to recognize the signs of exfiltration and take immediate action to block unauthorized data transfers.
+                    Welcome to Module 1 of our Blockchain Vulnerability Series. In this module, we delve into the intricate world of 51% attacks, a critical vulnerability that threatens the decentralized nature of blockchain networks. Explore real-world examples, understand the potential consequences, and discover effective mitigation strategies. Engage in interactive exercises to fortify your knowledge.
                     
                 </p>
-                <p><a href="#" onclick="toggleNews()">Lesson content goes here.</a></p>
+                <p><a href="E&c.html">Lesson content goes here.</a></p>
             </article>
             
 
             <!-- P2:L2  -->
             <article id="course2" class="lesson-box">
-                <h3>Automated Collection</h3>
+                <h3>Module 2: Double-Spend Attack</h3>
                 <p style="text-align: justify; padding: 10px;">
                     <strong>Overview:</strong>
-                    Automated collection involves the use of automated tools and scripts to gather sensitive information from multiple sources within a targeted network. Cybercriminals deploy these tools to swiftly extract large amounts of data, increasing the efficiency of their attacks. Learners will discover how to detect automated collection activities and implement safeguards to thwart these malicious efforts effectively.
                     
+                    Embark on Module 2, where we unravel the complexities of double-spend attacks. Delve into historical events like the DAO hack and incidents involving Bitcoin exchanges. Learn about the financial risks, market manipulation, and loss of trust associated with double-spending. Equip yourself with Byzantine Fault Tolerance algorithms and other preventive measures.
+                                        
                 </p>
-                <p><a href="#" onclick="toggleContainer2()">Lesson content goes here.</a></p>
+                <p><a href="E&c.html">Lesson content goes here.</a></p>
             </article>
 
             <!-- P3:L3 -->
             <article id="course3" class="lesson-box">
-                <h3>Exploit Public-Facing Application</h3>
+                <h3>Module 3: Reentrancy Attack</h3>
                 <p style="text-align: justify; padding: 10px;">
                     <strong>Overview:</strong> 
-                    Exploiting public-facing applications is a technique where cybercriminals identify and capitalize on vulnerabilities in applications accessible to the public. These applications may include web portals, online services, or APIs. Learners will gain insights into the common security flaws that attackers exploit in public-facing applications and how to bolster the application's defenses against potential attacks.
-                    
+                    Join us in Module 3 as we explore the nuances of reentrancy attacks, a sophisticated threat to smart contracts. Analyze the infamous DAO attack on the Ethereum network, understand the financial implications, and uncover mitigation strategies. 
+        
                 </p>
-                <p><a href="#" onclick="toggleContainer3()">Lesson content goes here.</a></p>
+                <p><a href="E&c.html">Lesson content goes here.</a></p>
             </article>
 
             <!-- P4:L4 -->
             <article id="course4" class="lesson-box">
-                <h3>Spearphishing Attachment</h3>
+                <h3>Module 4: Denial-of-Service Attack</h3>
                 <p style="text-align: justify; padding: 10px;">
                     <strong>Overview:</strong> 
-                    Spearphishing attachment is a targeted form of phishing where attackers send tailored email attachments to specific individuals within an organization. Once opened, these attachments may contain malware or malicious code, granting unauthorized access to the recipient's system. Understanding spearphishing techniques is essential for learners to recognize suspicious emails and avoid falling victim to these attacks.
                     
+                    In Module 4, we turn our attention to Denial-of-Service (DoS) attacks in the blockchain realm. Learn how these attacks can disrupt network availability and cause transaction delays. Discover mitigation strategies such as network robustness, load balancing, and rate limiting.
+                                        
                 </p>
                 <p><a href="#" onclick="toggleContainer4()">Lesson content goes here.</a></p>
             </article>
 
             <!-- P5:L5 -->
             <article id="course5" class="lesson-box">
-                <h3>Remote Desktop Protocol (RDP) Exploitation</h3>
+                <h3>Module 5: Man-in-the-Middle Attack</h3>
                 <p style="text-align: justify; padding: 10px;">
                     <strong>Overview:</strong> 
-                    Remote Desktop Protocol (RDP) exploitation involves cybercriminals exploiting vulnerabilities in RDP services to gain unauthorized access to remote systems. This technique is prevalent in attacks that target remote workers or systems with weak RDP security. Learners will explore best practices to secure RDP services and prevent unauthorized access to critical systems.
                     
+                    Concluding our series with Module 5, we explore the insidious Man-in-the-Middle attacks. Uncover the mechanisms behind these attacks through real-world examples like crypto wallet interceptions. Grasp the potential consequences and, more importantly, learn prevention strategies.
+                    
+                    Each module is crafted to provide a comprehensive learning experience, equipping you with the skills and knowledge needed to navigate the complex landscape of blockchain vulnerabilities. Let's embark on this educational journey together, ensuring a secure and resilient blockchain ecosystem.
+                                        
                 </p>
-                <p><a href="#" onclick="toggleContainer5()">Lesson content goes here.</a></p>
+                <p><a href="E&c.html">Lesson content goes here.</a></p>
             </article>
 
         </section>
     </main>
 
     <!-- Main Content Section -->
-    <div id="news-container" style="display: none;">
-        <div id="sidebar">
-            <!-- Sidebar content goes here -->
-            <h3>Course Outline</h3>
-            <ul>
-                <li><a href="#overview">Courses Overview</a></li>
-                <li><a href="#aims-objectives">Aims and Objectives</a></li>
-            </ul>
-        </div>
-        <div id="main-content" style="margin-left: 30px;">
-            
-            <!-- Main content goes here -->
-            <h3 id="overview">Courses Overview</h3>
-            <section>
-                <video width="640" height="360" controls>
-                    <source src="video_1.mp4" type="video/mp4">
-                </video>
-            </section>
-            <p style="text-align: justify; padding: 20px;">
-                <strong>Overview:</strong> Exfiltration over a Command and Control (C&C) channel is a sophisticated data exfiltration technique employed by cybercriminals to steal sensitive information from compromised systems and transfer it to external servers under their control. The C&C channel acts as a covert communication pathway between the attackers and the compromised systems, allowing them to operate undetected within the targeted network.
-            </p>
-
-            <h3 id="aims-objectives">Aims and Objectives:</h3>
-            <p style="margin-left: 10px;"> 
-                <strong>At the end of this course, learners should be able to:</strong>
-            </p>
-            <ul>
-                  <li>Identify the Concept and Significance:
-                    <ul>
-                      <li>Understand the fundamental concept of exfiltration over a Command and Control (C&C) channel.</li>
-                      <li>Recognize the critical significance of this technique in the context of data breaches.</li>
-                      <li>Gain insights into how cybercriminals exploit C&C channels to stealthily steal sensitive information from compromised systems.</li>
-                    </ul>
-                  </li>
-                  <li>Methods of Data Theft and Transfer:
-                    <ul>
-                      <li>Explore the various methods employed by cybercriminals to infiltrate and steal data from compromised systems.</li>
-                      <li>Understand the techniques used to transfer stolen data through C&C channels to external servers.</li>
-                      <li>Examine real-world examples to illustrate how attackers utilize this method to compromise financial institutions' security.</li>
-                    </ul>
-                  </li>
-                  <li>Implications and Consequences:
-                    <ul>
-                      <li>Comprehend the potential ramifications of exfiltration over C&C channels for fintech organizations.</li>
-                      <li>Analyze the financial and reputational damage that can result from successful exploitation of this technique.</li>
-                      <li>Explore case studies highlighting the impact of this technique on fintech institutions, their stakeholders, and the broader financial ecosystem.</li>
-                    </ul>
-                  </li>
-                  <li>Real-world Examples and Case Studies:
-                    <ul>
-                      <li>Gain practical insights into actual incidents of exfiltration over C&C channels within the fintech industry.</li>
-                      <li>Study specific cases where cybercriminals successfully used this technique to breach financial organizations.</li>
-                      <li>Understand the tactics and strategies employed by attackers to remain undetected and evade security measures.</li>
-                    </ul>
-                  </li>
-                  <li>Detection and Prevention Strategies:
-                    <ul>
-                      <li>Explore comprehensive methodologies for detecting exfiltration over C&C channels within complex network environments.</li>
-                      <li>Learn how to analyze network traffic patterns and identify suspicious communication routes.</li>
-                      <li>Acquire knowledge of advanced tools and technologies that aid in the detection and prevention of this technique.</li>
-                    </ul>
-                  </li> 
-            </ul>
-            <p>
-                <strong>Now, let's delve into the details of Exfiltration Over Command and Control Channel</strong>
-            </p>
-            
-            <div id="next-button-container">
-                <button id="next-button">Next</button>
-            </div>
     
-        </div>
-        
-    </div>
 
-    <div id="container2" style="display: none;">
-        <div id="sidebar">
-            <!-- Sidebar content goes here -->
-            <h3>Course Outline</h3>
-            <ul>
-                <li><a href="#overview">Courses Overview</a></li>
-                <li><a href="#aims-objectives">Aims and Objectives</a></li>
-            </ul>
-        </div>
-        <div id="main-content" style="margin-left: 30px;">
-            
-            <!-- Main content goes here -->
-            <h3 id="overview">Courses Overview</h3>
-            <section>
-                <video width="640" height="360" controls>
-                    <source src="video_2.mp4" type="video/mp4">
-                </video>
-            </section>
-            <p style="text-align: justify; padding: 20px;">
-                <strong>Overview:</strong>Automated collection involves the use of automated tools and scripts to gather sensitive information from multiple sources within a targeted network. Cybercriminals deploy these tools to swiftly extract large amounts of data, increasing the efficiency of their attacks. Learners will discover how to detect automated collection activities and implement safeguards to thwart these malicious efforts effectively.
-
-            </p>
-
-            <h3 id="aims-objectives">Aims and Objectives:</h3>
-            <p style="margin-left: 10px;"> 
-                <strong>At the end of this course, learners should be able to:</strong>
-            </p>
-            <ul>
-                  <li>Identify the Concept and Significance:
-                    <ul>
-                      <li>Understand the fundamental concept of Automated collection.</li>
-                      <li>Recognize the critical significance of this technique in the context of data breaches.</li>
-                      <li>Gain insights Insights into Cybercriminals' Utilization of Automated Collection Techniques</li>
-                    </ul>
-                  </li>
-                  <li>Methods of Automated Data Collection:
-                    <ul>
-                      <li>Explore the various methods employed by cybercriminals to infiltrate and steal data from compromised systems.</li>
-                      <li>Understand the techniques used to transfer stolen data through C&C channels to external servers.</li>
-                      <li>Examine real-world examples to illustrate how attackers utilize this method to compromise financial institutions' security.</li>
-                    </ul>
-                  </li>
-                  <li>Implications and Consequences:
-                    <ul>
-                      <li>Comprehend the potential ramifications of Automated collection for fintech organizations.</li>
-                      <li>Analyze the financial and reputational damage that can result from successful exploitation of this technique.</li>
-                      <li>Explore case studies highlighting the impact of this technique on fintech institutions, their stakeholders, and the broader financial ecosystem.</li>
-                    </ul>
-                  </li>
-                  <li>Real-world Examples and Case Studies:
-                    <ul>
-                      <li>Gain practical insights into actual incidents of Automated collection within the fintech industry.</li>
-                      <li>Study specific cases where cybercriminals successfully used this technique to breach financial organizations.</li>
-                      <li>Understand the tactics and strategies employed by attackers to remain undetected and evade security measures.</li>
-                    </ul>
-                  </li>
-                  <li>Detection and Prevention Strategies:
-                    <ul>
-                      <li>Explore comprehensive methodologies for detecting Automated collection.</li>
-                      <li>Acquire knowledge of advanced tools and technologies that aid in the detection and prevention of this technique.</li>
-                    </ul>
-                  </li> 
-            </ul>
-            <p>
-                <strong>Now, let's delve into the details of Automated collection</strong>
-            </p>
-            
-            <div id="next-button-container2">
-                <button id="next-button2">Next</button>
-            </div>
     
-        </div>
-        
-    </div>
-
-    <div id="container3" style="display: none;">
-        <div id="sidebar">
-            <!-- Sidebar content goes here -->
-            <h3>Course Outline</h3>
-            <ul>
-                <li><a href="#overview">Courses Overview</a></li>
-                <li><a href="#aims-objectives">Aims and Objectives</a></li>
-            </ul>
-        </div>
-        <div id="main-content" style="margin-left: 30px;">
-            
-            <!-- Main content goes here -->
-            <h3 id="overview">Courses Overview</h3>
-            <section>
-                <video width="640" height="360" controls>
-                    <source src="video_3.mp4" type="video/mp4">
-                </video>
-            </section>
-            <p style="text-align: justify; padding: 20px;">
-                <strong>Overview:</strong>Exploiting public-facing applications is a technique where cybercriminals identify and capitalize on vulnerabilities in applications accessible to the public. These applications may include web portals, online services, or APIs. Learners will gain insights into the common security flaws that attackers exploit in public-facing applications and how to bolster the application's defenses against potential attacks.
-
-            </p>
-
-            <h3 id="aims-objectives">Aims and Objectives:</h3>
-            <p style="margin-left: 10px;"> 
-                <strong>At the end of this course, learners should be able to:</strong>
-            </p>
-            <ul>
-                  <li>Identify the Concept and Significance:
-                    <ul>
-                      <li>Understand the fundamental concept of Exploiting public-facing applications.</li>
-                      <li>Recognize the critical significance of this technique in the context of data breaches.</li>
-                      <li>Gain insights into Attackers' Motivations and Strategies</li>
-                    </ul>
-                  </li>
-                  <li>Methods of Exploiting Public-Facing Applications:
-                    <ul>
-                      <li>Explore the various methods employed by cybercriminals to infiltrate and steal data from compromised systems.</li>
-                      <li>Understand the techniques used to transfer stolen data through Exploiting public-facing applications.</li>
-                      <li>Examine real-world examples to illustrate how attackers utilize this method to compromise financial institutions' security.</li>
-                    </ul>
-                  </li>
-                  <li>Implications and Consequences:
-                    <ul>
-                      <li>Comprehend the potential ramifications of Exploiting public-facing applications for fintech organizations.</li>
-                      <li>Analyze the financial and reputational damage that can result from successful exploitation of this technique.</li>
-                      <li>Explore case studies highlighting the impact of this technique on fintech institutions, their stakeholders, and the broader financial ecosystem.</li>
-                    </ul>
-                  </li>
-                  <li>Real-world Examples and Case Studies:
-                    <ul>
-                      <li>Gain practical insights into actual incidents of Exploiting public-facing applications within the fintech industry.</li>
-                      <li>Study specific cases where cybercriminals successfully used this technique to breach financial organizations.</li>
-                      <li>Understand the tactics and strategies employed by attackers to remain undetected and evade security measures.</li>
-                    </ul>
-                  </li>
-                  <li>Detection and Prevention Strategies:
-                    <ul>
-                      <li>Explore comprehensive methodologies for detecting Exploiting public-facing applications.</li>
-                      <li>Acquire knowledge of advanced tools and technologies that aid in the detection and prevention of this technique.</li>
-                    </ul>
-                  </li> 
-            </ul>
-            <p>
-                <strong>Now, let's delve into the details of Exploiting public-facing applications</strong>
-            </p>
-            
-            <div id="next-button-container3">
-                <button id="next-button3">Next</button>
-            </div>
-    
-        </div>
-        
-    </div>
-
-    <div id="container4" style="display: none;">
-        <div id="sidebar">
-            <!-- Sidebar content goes here -->
-            <h3>Course Outline</h3>
-            <ul>
-                <li><a href="#overview">Courses Overview</a></li>
-                <li><a href="#aims-objectives">Aims and Objectives</a></li>
-            </ul>
-        </div>
-        <div id="main-content" style="margin-left: 30px;">
-            
-            <!-- Main content goes here -->
-            <h3 id="overview">Courses Overview</h3>
-            <section>
-                <video width="640" height="360" controls>
-                    <source src="video_4.mp4" type="video/mp4">
-                </video>
-            </section>
-            <p style="text-align: justify; padding: 20px;">
-                <strong>Overview:</strong>Spearphishing attachment is a targeted form of phishing where attackers send tailored email attachments to specific individuals within an organization. Once opened, these attachments may contain malware or malicious code, granting unauthorized access to the recipient's system. Understanding spearphishing techniques is essential for learners to recognize suspicious emails and avoid falling victim to these attacks.
-
-            </p>
-
-            <h3 id="aims-objectives">Aims and Objectives:</h3>
-            <p style="margin-left: 10px;"> 
-                <strong>At the end of this course, learners should be able to:</strong>
-            </p>
-            <ul>
-                  <li>Identify the Concept and Significance:
-                    <ul>
-                      <li>Understand the fundamental concept of Spearphishing attachment.</li>
-                      <li>Recognize the critical significance of this technique in the context of data breaches.</li>
-                      <li>Gain insights into Attackers' Tactics and Objectivess.</li>
-                    </ul>
-                  </li>
-                  <li>Methods of Spearphishing Attachment:
-                    <ul>
-                      <li>Explore the various methods employed by cybercriminals to infiltrate and steal data from compromised systems.</li>
-                      <li>Understand the techniques used to transfer stolen data through Spearphishing attachment.</li>
-                      <li>Examine real-world examples to illustrate how attackers utilize this method to compromise financial institutions' security.</li>
-                    </ul>
-                  </li>
-                  <li>Implications and Consequences:
-                    <ul>
-                      <li>Comprehend the potential ramifications of Spearphishing attachment for fintech organizations.</li>
-                      <li>Analyze the financial and reputational damage that can result from successful exploitation of this technique.</li>
-                      <li>Explore case studies highlighting the impact of this technique on fintech institutions, their stakeholders, and the broader financial ecosystem.</li>
-                    </ul>
-                  </li>
-                  <li>Real-world Examples and Case Studies:
-                    <ul>
-                      <li>Gain practical insights into actual incidents of Spearphishing attachment within the fintech industry.</li>
-                      <li>Study specific cases where cybercriminals successfully used this technique to breach financial organizations.</li>
-                      <li>Understand the tactics and strategies employed by attackers to remain undetected and evade security measures.</li>
-                    </ul>
-                  </li>
-                  <li>Detection and Prevention Strategies:
-                    <ul>
-                      <li>Explore comprehensive methodologies for detecting Spearphishing attachment.</li>
-                      <li>Acquire knowledge of advanced tools and technologies that aid in the detection and prevention of this technique.</li>
-                    </ul>
-                  </li> 
-            </ul>
-            <p>
-                <strong>Now, let's delve into the details of Spearphishing attachment</strong>
-            </p>
-            
-            <div id="next-button-container4">
-                <button id="next-button4">Next</button>
-            </div>
-    
-        </div>
-        
-    </div>
-
-    <div id="container5" style="display: none;">
-        <div id="sidebar">
-            <!-- Sidebar content goes here -->
-            <h3>Course Outline</h3>
-            <ul>
-                <li><a href="#overview">Courses Overview</a></li>
-                <li><a href="#aims-objectives">Aims and Objectives</a></li>
-            </ul>
-        </div>
-        <div id="main-content" style="margin-left: 30px;">
-            
-            <!-- Main content goes here -->
-            <h3 id="overview">Courses Overview</h3>
-            <section>
-                <video width="640" height="360" controls>
-                    <source src="video_5.mp4" type="video/mp4">
-                </video>
-            </section>
-            <p style="text-align: justify; padding: 20px;">
-                <strong>Overview:</strong>Remote Desktop Protocol (RDP) exploitation involves cybercriminals exploiting vulnerabilities in RDP services to gain unauthorized access to remote systems. This technique is prevalent in attacks that target remote workers or systems with weak RDP security. Learners will explore best practices to secure RDP services and prevent unauthorized access to critical systems.
-
-            </p>
-
-            <h3 id="aims-objectives">Aims and Objectives:</h3>
-            <p style="margin-left: 10px;"> 
-                <strong>At the end of this course, learners should be able to:</strong>
-            </p>
-            <ul>
-                  <li>Identify the Concept and Significance:
-                    <ul>
-                      <li>Understand the fundamental concept of Remote Desktop Protocol (RDP) exploitation.</li>
-                      <li>Recognize the critical significance of this technique in the context of data breaches.</li>
-                      <li>Gain Insights into Attackers' Tactics and Objectives.</li>
-                    </ul>
-                  </li>
-                  <li>Methods of Remote Desktop Protocol (RDP) exploitation:
-                    <ul>
-                      <li>Explore the various methods employed by cybercriminals to infiltrate and steal data from compromised systems.</li>
-                      <li>Understand the techniques used to transfer stolen data through Remote Desktop Protocol (RDP) exploitation.</li>
-                      <li>Examine real-world examples to illustrate how attackers utilize this method to compromise financial institutions' security.</li>
-                    </ul>
-                  </li>
-                  <li>Implications and Consequences:
-                    <ul>
-                      <li>Comprehend the potential ramifications of Remote Desktop Protocol (RDP) exploitation for fintech organizations.</li>
-                      <li>Analyze the financial and reputational damage that can result from successful exploitation of this technique.</li>
-                      <li>Explore case studies highlighting the impact of this technique on fintech institutions, their stakeholders, and the broader financial ecosystem.</li>
-                    </ul>
-                  </li>
-                  <li>Real-world Examples and Case Studies:
-                    <ul>
-                      <li>Gain practical insights into actual incidents of Remote Desktop Protocol (RDP) exploitation within the fintech industry.</li>
-                      <li>Study specific cases where cybercriminals successfully used this technique to breach financial organizations.</li>
-                      <li>Understand the tactics and strategies employed by attackers to remain undetected and evade security measures.</li>
-                    </ul>
-                  </li>
-                  <li>Detection and Prevention Strategies:
-                    <ul>
-                      <li>Explore comprehensive methodologies for detecting Remote Desktop Protocol (RDP) exploitation.</li>
-                      <li>Acquire knowledge of advanced tools and technologies that aid in the detection and prevention of this technique.</li>
-                    </ul>
-                  </li> 
-            </ul>
-            <p>
-                <strong>Now, let's delve into the details of Remote Desktop Protocol (RDP) exploitation</strong>
-            </p>
-            
-            <div id="next-button-container5">
-                <button id="next-button5">Next</button>
-            </div>
-    
-        </div>
-        
-    </div>
-
     <!-- Footer Section -->
     <footer>
         <p>Contact us: keptech@gmail.com</p>
@@ -1031,10 +694,10 @@ body {
       }
 
         document.getElementById("next-button").addEventListener("click", function() {
-            window.location.href = "https://htmlpreview.github.io/?https://raw.githubusercontent.com/AbubakreQuam/Moodle/main/E&c.html";
+            window.location.href = "E&c.html";
         });
         document.getElementById("next-button2").addEventListener("click", function() {
-            window.location.href = "https://htmlpreview.github.io/?https://raw.githubusercontent.com/AbubakreQuam/Moodle/main/E&c.html";
+            window.location.href = "second.html";
         });
         document.getElementById("next-button3").addEventListener("click", function() {
             window.location.href = "third.html";
