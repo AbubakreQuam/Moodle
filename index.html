@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-Learning Website</title>
+    <style>
+
+body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        header img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav li {
+            margin-right: 20px;
+        }
+
+        nav li:last-child {
+            margin-right: 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #e5e5e5;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 36px;
+            color: #333;
+        }
+
+        p {
+            color: #666;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        section {
+            margin-bottom: 30px;
+        }
+
+        section h2 {
+            margin-bottom: 15px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        section ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        section li {
+            margin-bottom: 10px;
+        }
+
+        section li a {
+            color: #007bff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        section li a:hover {
+            color: #0056b3;
+        }
+
+        .lesson-box {
+            border: 1px solid #ddd;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .lesson-box h3 {
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .lesson-box p {
+            color: #666;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        footer {
+            background-color: #333;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #e5e5e5;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        /* Your CSS styles go here */
+        /* ... */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Next button styles */
+        #next-button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        #next-button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            width: 150px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 20px;
+        }
+
+        #next-button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Table styles */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+        }
+
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+          /* Sidebar styles */
+          #news-container {
+            display: flex;
+        }
+
+        #sidebar {
+            flex: 0 0 20%;
+            background-color: #021f3b; 
+            color: #fff; /* Text color for the sidebar */
+            padding: 0px;
+        }
+
+        #sidebar ul li a {
+            color: #fff; /* Text color for the sidebar */
+        }
+
+        #main-content {
+            flex: 1;
+            padding: 5px;
+        }
+
+        /* Sidebar styles */
+        #container2 {
+            display: flex;
+        }
+
+        #sidebar {
+            flex: 0 0 20%;
+            background-color: #021f3b; 
+            color: #fff; /* Text color for the sidebar */
+            padding: 0px;
+        }
+
+        #sidebar ul li a {
+            color: #fff; /* Text color for the sidebar */
+        }
+
+        #main-content {
+            flex: 1;
+            padding: 5px;
+        }
+
+        /* Next button styles */
+        #next-button-container2 {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        #next-button2 {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            width: 150px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 20px;
+        }
+
+        #next-button2:hover {
+            background-color: #0056b3;
+        }
+
+        /* Sidebar styles */
+        #container3 {
+            display: flex;
+        }
+
+        #sidebar {
+            flex: 0 0 20%;
+            background-color: #021f3b; 
+            color: #fff; /* Text color for the sidebar */
+            padding: 0px;
+        }
+
+        #sidebar ul li a {
+            color: #fff; /* Text color for the sidebar */
+        }
+
+        #main-content {
+            flex: 1;
+            padding: 5px;
+        }
+
+        /* Next button styles */
+        #next-button-container3 {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        #next-button3 {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            width: 150px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 20px;
+        }
+
+        #next-button3:hover {
+            background-color: #0056b3;
+        }
+
+        /* Sidebar styles */
+        #container4 {
+            display: flex;
+        }
+
+        #sidebar {
+            flex: 0 0 20%;
+            background-color: #021f3b; 
+            color: #fff; /* Text color for the sidebar */
+            padding: 0px;
+        }
+
+        #sidebar ul li a {
+            color: #fff; /* Text color for the sidebar */
+        }
+
+        #main-content {
+            flex: 1;
+            padding: 5px;
+        }
+
+        /* Next button styles */
+        #next-button-container4 {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        #next-button4 {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            width: 150px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 20px;
+        }
+
+        #next-button4:hover {
+            background-color: #0056b3;
+        }
+
+        /* Sidebar styles */
+        #container5 {
+            display: flex;
+        }
+
+        #sidebar {
+            flex: 0 0 20%;
+            background-color: #021f3b; 
+            color: #fff; /* Text color for the sidebar */
+            padding: 0px;
+        }
+
+        #sidebar ul li a {
+            color: #fff; /* Text color for the sidebar */
+        }
+
+        #main-content {
+            flex: 1;
+            padding: 5px;
+        }
+
+        /* Next button styles */
+        #next-button-container5 {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        #next-button5 {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            width: 150px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-bottom: 20px;
+        }
+
+        #next-button5:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <img src="online-course.png" alt="Logo">
+        <nav>
+            <ul>
+                <li style="margin-left: 20px;"><a href="#" onclick="toggleHome()">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Courses</a>
+                    <div class="dropdown-content">
+                        <a href="#" onclick="toggleNews()">Exfiltration Over C&C Channel</a>
+                        <a href="#" onclick="toggleContainer2()">Automated Collection</a>
+                        <a href="#" onclick="toggleContainer3()">Exploit Public-Facing Application</a>
+                        <a href="#" onclick="toggleContainer4()">Spearphishing Attachment</a>
+                        <a href="#" onclick="toggleContainer5()">RDP Exploitation</a>
+                    </div>
+                </li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main id="home-content">
+        <h1>Learn Fintech Attack techniques</h1>
+        <p>Start your journey to become a Security expert.</p>
+
+        <!-- Course Information Section -->
+        <section>
+            <h2>Course Information</h2>
+            <ul>
+                <li><a href="#course1">Exfiltration Over Command and Control Channel</a></li>
+                <li><a href="#course2">Automated Collection</a></li>
+                <li><a href="#course3">Exploit Public-Facing Application</a></li>
+                <li><a href="#course4">Spearphishing Attachment</a></li>
+                <li><a href="#course5">Remote Desktop Protocol (RDP) Exploitation</a></li>
+            </ul>
+        </section>
+        
+        
+        
+        <!-- Lessons Section -->
+        <section>
+            <h2>Lessons</h2>
+
+            <!-- P1:L1  -->
+            <article id="course1" class="lesson-box">
+                <h3>Exfiltration Over Command and Control Channel</h3>
+                <p style="text-align: justify; padding: 10px;">
+                    <strong>Overview:</strong>
+                    Exfiltration over a Command and Control (C&C) channel is a technique employed by cybercriminals to steal sensitive data from a compromised system and transmit it to an external location under their control. The C&C channel serves as the communication pathway for attackers to receive stolen data and issue further commands to the compromised system. Understanding this technique is crucial as it allows learners to recognize the signs of exfiltration and take immediate action to block unauthorized data transfers.
+                    
+                </p>
+                <p><a href="#" onclick="toggleNews()">Lesson content goes here.</a></p>
+            </article>
+            
+
+            <!-- P2:L2  -->
+            <article id="course2" class="lesson-box">
+                <h3>Automated Collection</h3>
+                <p style="text-align: justify; padding: 10px;">
+                    <strong>Overview:</strong>
+                    Automated collection involves the use of automated tools and scripts to gather sensitive information from multiple sources within a targeted network. Cybercriminals deploy these tools to swiftly extract large amounts of data, increasing the efficiency of their attacks. Learners will discover how to detect automated collection activities and implement safeguards to thwart these malicious efforts effectively.
+                    
+                </p>
+                <p><a href="#" onclick="toggleContainer2()">Lesson content goes here.</a></p>
+            </article>
+
+            <!-- P3:L3 -->
+            <article id="course3" class="lesson-box">
+                <h3>Exploit Public-Facing Application</h3>
+                <p style="text-align: justify; padding: 10px;">
+                    <strong>Overview:</strong> 
+                    Exploiting public-facing applications is a technique where cybercriminals identify and capitalize on vulnerabilities in applications accessible to the public. These applications may include web portals, online services, or APIs. Learners will gain insights into the common security flaws that attackers exploit in public-facing applications and how to bolster the application's defenses against potential attacks.
+                    
+                </p>
+                <p><a href="#" onclick="toggleContainer3()">Lesson content goes here.</a></p>
+            </article>
+
+            <!-- P4:L4 -->
+            <article id="course4" class="lesson-box">
+                <h3>Spearphishing Attachment</h3>
+                <p style="text-align: justify; padding: 10px;">
+                    <strong>Overview:</strong> 
+                    Spearphishing attachment is a targeted form of phishing where attackers send tailored email attachments to specific individuals within an organization. Once opened, these attachments may contain malware or malicious code, granting unauthorized access to the recipient's system. Understanding spearphishing techniques is essential for learners to recognize suspicious emails and avoid falling victim to these attacks.
+                    
+                </p>
+                <p><a href="#" onclick="toggleContainer4()">Lesson content goes here.</a></p>
+            </article>
+
+            <!-- P5:L5 -->
+            <article id="course5" class="lesson-box">
+                <h3>Remote Desktop Protocol (RDP) Exploitation</h3>
+                <p style="text-align: justify; padding: 10px;">
+                    <strong>Overview:</strong> 
+                    Remote Desktop Protocol (RDP) exploitation involves cybercriminals exploiting vulnerabilities in RDP services to gain unauthorized access to remote systems. This technique is prevalent in attacks that target remote workers or systems with weak RDP security. Learners will explore best practices to secure RDP services and prevent unauthorized access to critical systems.
+                    
+                </p>
+                <p><a href="#" onclick="toggleContainer5()">Lesson content goes here.</a></p>
+            </article>
+
+        </section>
+    </main>
+
+    <!-- Main Content Section -->
+    <div id="news-container" style="display: none;">
+        <div id="sidebar">
+            <!-- Sidebar content goes here -->
+            <h3>Course Outline</h3>
+            <ul>
+                <li><a href="#overview">Courses Overview</a></li>
+                <li><a href="#aims-objectives">Aims and Objectives</a></li>
+            </ul>
+        </div>
+        <div id="main-content" style="margin-left: 30px;">
+            
+            <!-- Main content goes here -->
+            <h3 id="overview">Courses Overview</h3>
+            <section>
+                <video width="640" height="360" controls>
+                    <source src="C:\Users\USER\Desktop\Databreach Project\video_1.mp4" type="video/mp4">
+                </video>
+            </section>
+            <p style="text-align: justify; padding: 20px;">
+                <strong>Overview:</strong> Exfiltration over a Command and Control (C&C) channel is a sophisticated data exfiltration technique employed by cybercriminals to steal sensitive information from compromised systems and transfer it to external servers under their control. The C&C channel acts as a covert communication pathway between the attackers and the compromised systems, allowing them to operate undetected within the targeted network.
+            </p>
+
+            <h3 id="aims-objectives">Aims and Objectives:</h3>
+            <p style="margin-left: 10px;"> 
+                <strong>At the end of this course, learners should be able to:</strong>
+            </p>
+            <ul>
+                  <li>Identify the Concept and Significance:
+                    <ul>
+                      <li>Understand the fundamental concept of exfiltration over a Command and Control (C&C) channel.</li>
+                      <li>Recognize the critical significance of this technique in the context of data breaches.</li>
+                      <li>Gain insights into how cybercriminals exploit C&C channels to stealthily steal sensitive information from compromised systems.</li>
+                    </ul>
+                  </li>
+                  <li>Methods of Data Theft and Transfer:
+                    <ul>
+                      <li>Explore the various methods employed by cybercriminals to infiltrate and steal data from compromised systems.</li>
+                      <li>Understand the techniques used to transfer stolen data through C&C channels to external servers.</li>
+                      <li>Examine real-world examples to illustrate how attackers utilize this method to compromise financial institutions' security.</li>
+                    </ul>
+                  </li>
+                  <li>Implications and Consequences:
+                    <ul>
+                      <li>Comprehend the potential ramifications of exfiltration over C&C channels for fintech organizations.</li>
+                      <li>Analyze the financial and reputational damage that can result from successful exploitation of this technique.</li>
+                      <li>Explore case studies highlighting the impact of this technique on fintech institutions, their stakeholders, and the broader financial ecosystem.</li>
+                    </ul>
+                  </li>
+                  <li>Real-world Examples and Case Studies:
+                    <ul>
+                      <li>Gain practical insights into actual incidents of exfiltration over C&C channels within the fintech industry.</li>
+                      <li>Study specific cases where cybercriminals successfully used this technique to breach financial organizations.</li>
+                      <li>Understand the tactics and strategies employed by attackers to remain undetected and evade security measures.</li>
+                    </ul>
+                  </li>
+                  <li>Detection and Prevention Strategies:
+                    <ul>
+                      <li>Explore comprehensive methodologies for detecting exfiltration over C&C channels within complex network environments.</li>
+                      <li>Learn how to analyze network traffic patterns and identify suspicious communication routes.</li>
+                      <li>Acquire knowledge of advanced tools and technologies that aid in the detection and prevention of this technique.</li>
+                    </ul>
+                  </li> 
+            </ul>
+            <p>
+                <strong>Now, let's delve into the details of Exfiltration Over Command and Control Channel</strong>
+            </p>
+            
+            <div id="next-button-container">
+                <button id="next-button">Next</button>
+            </div>
+    
+        </div>
+        
+    </div>
+
+    <div id="container2" style="display: none;">
+        <div id="sidebar">
+            <!-- Sidebar content goes here -->
+            <h3>Course Outline</h3>
+            <ul>
+                <li><a href="#overview">Courses Overview</a></li>
+                <li><a href="#aims-objectives">Aims and Objectives</a></li>
+            </ul>
+        </div>
+        <div id="main-content" style="margin-left: 30px;">
+            
+            <!-- Main content goes here -->
+            <h3 id="overview">Courses Overview</h3>
+            <section>
+                <video width="640" height="360" controls>
+                    <source src="C:\Users\USER\Desktop\Databreach Project\video_2.mp4" type="video/mp4">
+                </video>
+            </section>
+            <p style="text-align: justify; padding: 20px;">
+                <strong>Overview:</strong>Automated collection involves the use of automated tools and scripts to gather sensitive information from multiple sources within a targeted network. Cybercriminals deploy these tools to swiftly extract large amounts of data, increasing the efficiency of their attacks. Learners will discover how to detect automated collection activities and implement safeguards to thwart these malicious efforts effectively.
+
+            </p>
+
+            <h3 id="aims-objectives">Aims and Objectives:</h3>
+            <p style="margin-left: 10px;"> 
+                <strong>At the end of this course, learners should be able to:</strong>
+            </p>
+            <ul>
+                  <li>Identify the Concept and Significance:
+                    <ul>
+                      <li>Understand the fundamental concept of Automated collection.</li>
+                      <li>Recognize the critical significance of this technique in the context of data breaches.</li>
+                      <li>Gain insights Insights into Cybercriminals' Utilization of Automated Collection Techniques</li>
+                    </ul>
+                  </li>
+                  <li>Methods of Automated Data Collection:
+                    <ul>
+                      <li>Explore the various methods employed by cybercriminals to infiltrate and steal data from compromised systems.</li>
+                      <li>Understand the techniques used to transfer stolen data through C&C channels to external servers.</li>
+                      <li>Examine real-world examples to illustrate how attackers utilize this method to compromise financial institutions' security.</li>
+                    </ul>
+                  </li>
+                  <li>Implications and Consequences:
+                    <ul>
+                      <li>Comprehend the potential ramifications of Automated collection for fintech organizations.</li>
+                      <li>Analyze the financial and reputational damage that can result from successful exploitation of this technique.</li>
+                      <li>Explore case studies highlighting the impact of this technique on fintech institutions, their stakeholders, and the broader financial ecosystem.</li>
+                    </ul>
+                  </li>
+                  <li>Real-world Examples and Case Studies:
+                    <ul>
+                      <li>Gain practical insights into actual incidents of Automated collection within the fintech industry.</li>
+                      <li>Study specific cases where cybercriminals successfully used this technique to breach financial organizations.</li>
+                      <li>Understand the tactics and strategies employed by attackers to remain undetected and evade security measures.</li>
+                    </ul>
+                  </li>
+                  <li>Detection and Prevention Strategies:
+                    <ul>
+                      <li>Explore comprehensive methodologies for detecting Automated collection.</li>
+                      <li>Acquire knowledge of advanced tools and technologies that aid in the detection and prevention of this technique.</li>
+                    </ul>
+                  </li> 
+            </ul>
+            <p>
+                <strong>Now, let's delve into the details of Automated collection</strong>
+            </p>
+            
+            <div id="next-button-container2">
+                <button id="next-button2">Next</button>
+            </div>
+    
+        </div>
+        
+    </div>
+
+    <div id="container3" style="display: none;">
+        <div id="sidebar">
+            <!-- Sidebar content goes here -->
+            <h3>Course Outline</h3>
+            <ul>
+                <li><a href="#overview">Courses Overview</a></li>
+                <li><a href="#aims-objectives">Aims and Objectives</a></li>
+            </ul>
+        </div>
+        <div id="main-content" style="margin-left: 30px;">
+            
+            <!-- Main content goes here -->
+            <h3 id="overview">Courses Overview</h3>
+            <section>
+                <video width="640" height="360" controls>
+                    <source src="C:\Users\USER\Desktop\Databreach Project\video_3.mp4" type="video/mp4">
+                </video>
+            </section>
+            <p style="text-align: justify; padding: 20px;">
+                <strong>Overview:</strong>Exploiting public-facing applications is a technique where cybercriminals identify and capitalize on vulnerabilities in applications accessible to the public. These applications may include web portals, online services, or APIs. Learners will gain insights into the common security flaws that attackers exploit in public-facing applications and how to bolster the application's defenses against potential attacks.
+
+            </p>
+
+            <h3 id="aims-objectives">Aims and Objectives:</h3>
+            <p style="margin-left: 10px;"> 
+                <strong>At the end of this course, learners should be able to:</strong>
+            </p>
+            <ul>
+                  <li>Identify the Concept and Significance:
+                    <ul>
+                      <li>Understand the fundamental concept of Exploiting public-facing applications.</li>
+                      <li>Recognize the critical significance of this technique in the context of data breaches.</li>
+                      <li>Gain insights into Attackers' Motivations and Strategies</li>
+                    </ul>
+                  </li>
+                  <li>Methods of Exploiting Public-Facing Applications:
+                    <ul>
+                      <li>Explore the various methods employed by cybercriminals to infiltrate and steal data from compromised systems.</li>
+                      <li>Understand the techniques used to transfer stolen data through Exploiting public-facing applications.</li>
+                      <li>Examine real-world examples to illustrate how attackers utilize this method to compromise financial institutions' security.</li>
+                    </ul>
+                  </li>
+                  <li>Implications and Consequences:
+                    <ul>
+                      <li>Comprehend the potential ramifications of Exploiting public-facing applications for fintech organizations.</li>
+                      <li>Analyze the financial and reputational damage that can result from successful exploitation of this technique.</li>
+                      <li>Explore case studies highlighting the impact of this technique on fintech institutions, their stakeholders, and the broader financial ecosystem.</li>
+                    </ul>
+                  </li>
+                  <li>Real-world Examples and Case Studies:
+                    <ul>
+                      <li>Gain practical insights into actual incidents of Exploiting public-facing applications within the fintech industry.</li>
+                      <li>Study specific cases where cybercriminals successfully used this technique to breach financial organizations.</li>
+                      <li>Understand the tactics and strategies employed by attackers to remain undetected and evade security measures.</li>
+                    </ul>
+                  </li>
+                  <li>Detection and Prevention Strategies:
+                    <ul>
+                      <li>Explore comprehensive methodologies for detecting Exploiting public-facing applications.</li>
+                      <li>Acquire knowledge of advanced tools and technologies that aid in the detection and prevention of this technique.</li>
+                    </ul>
+                  </li> 
+            </ul>
+            <p>
+                <strong>Now, let's delve into the details of Exploiting public-facing applications</strong>
+            </p>
+            
+            <div id="next-button-container3">
+                <button id="next-button3">Next</button>
+            </div>
+    
+        </div>
+        
+    </div>
+
+    <div id="container4" style="display: none;">
+        <div id="sidebar">
+            <!-- Sidebar content goes here -->
+            <h3>Course Outline</h3>
+            <ul>
+                <li><a href="#overview">Courses Overview</a></li>
+                <li><a href="#aims-objectives">Aims and Objectives</a></li>
+            </ul>
+        </div>
+        <div id="main-content" style="margin-left: 30px;">
+            
+            <!-- Main content goes here -->
+            <h3 id="overview">Courses Overview</h3>
+            <section>
+                <video width="640" height="360" controls>
+                    <source src="C:\Users\USER\Desktop\Databreach Project\video_4.mp4" type="video/mp4">
+                </video>
+            </section>
+            <p style="text-align: justify; padding: 20px;">
+                <strong>Overview:</strong>Spearphishing attachment is a targeted form of phishing where attackers send tailored email attachments to specific individuals within an organization. Once opened, these attachments may contain malware or malicious code, granting unauthorized access to the recipient's system. Understanding spearphishing techniques is essential for learners to recognize suspicious emails and avoid falling victim to these attacks.
+
+            </p>
+
+            <h3 id="aims-objectives">Aims and Objectives:</h3>
+            <p style="margin-left: 10px;"> 
+                <strong>At the end of this course, learners should be able to:</strong>
+            </p>
+            <ul>
+                  <li>Identify the Concept and Significance:
+                    <ul>
+                      <li>Understand the fundamental concept of Spearphishing attachment.</li>
+                      <li>Recognize the critical significance of this technique in the context of data breaches.</li>
+                      <li>Gain insights into Attackers' Tactics and Objectivess.</li>
+                    </ul>
+                  </li>
+                  <li>Methods of Spearphishing Attachment:
+                    <ul>
+                      <li>Explore the various methods employed by cybercriminals to infiltrate and steal data from compromised systems.</li>
+                      <li>Understand the techniques used to transfer stolen data through Spearphishing attachment.</li>
+                      <li>Examine real-world examples to illustrate how attackers utilize this method to compromise financial institutions' security.</li>
+                    </ul>
+                  </li>
+                  <li>Implications and Consequences:
+                    <ul>
+                      <li>Comprehend the potential ramifications of Spearphishing attachment for fintech organizations.</li>
+                      <li>Analyze the financial and reputational damage that can result from successful exploitation of this technique.</li>
+                      <li>Explore case studies highlighting the impact of this technique on fintech institutions, their stakeholders, and the broader financial ecosystem.</li>
+                    </ul>
+                  </li>
+                  <li>Real-world Examples and Case Studies:
+                    <ul>
+                      <li>Gain practical insights into actual incidents of Spearphishing attachment within the fintech industry.</li>
+                      <li>Study specific cases where cybercriminals successfully used this technique to breach financial organizations.</li>
+                      <li>Understand the tactics and strategies employed by attackers to remain undetected and evade security measures.</li>
+                    </ul>
+                  </li>
+                  <li>Detection and Prevention Strategies:
+                    <ul>
+                      <li>Explore comprehensive methodologies for detecting Spearphishing attachment.</li>
+                      <li>Acquire knowledge of advanced tools and technologies that aid in the detection and prevention of this technique.</li>
+                    </ul>
+                  </li> 
+            </ul>
+            <p>
+                <strong>Now, let's delve into the details of Spearphishing attachment</strong>
+            </p>
+            
+            <div id="next-button-container4">
+                <button id="next-button4">Next</button>
+            </div>
+    
+        </div>
+        
+    </div>
+
+    <div id="container5" style="display: none;">
+        <div id="sidebar">
+            <!-- Sidebar content goes here -->
+            <h3>Course Outline</h3>
+            <ul>
+                <li><a href="#overview">Courses Overview</a></li>
+                <li><a href="#aims-objectives">Aims and Objectives</a></li>
+            </ul>
+        </div>
+        <div id="main-content" style="margin-left: 30px;">
+            
+            <!-- Main content goes here -->
+            <h3 id="overview">Courses Overview</h3>
+            <section>
+                <video width="640" height="360" controls>
+                    <source src="C:\Users\USER\Desktop\Databreach Project\video_5.mp4" type="video/mp4">
+                </video>
+            </section>
+            <p style="text-align: justify; padding: 20px;">
+                <strong>Overview:</strong>Remote Desktop Protocol (RDP) exploitation involves cybercriminals exploiting vulnerabilities in RDP services to gain unauthorized access to remote systems. This technique is prevalent in attacks that target remote workers or systems with weak RDP security. Learners will explore best practices to secure RDP services and prevent unauthorized access to critical systems.
+
+            </p>
+
+            <h3 id="aims-objectives">Aims and Objectives:</h3>
+            <p style="margin-left: 10px;"> 
+                <strong>At the end of this course, learners should be able to:</strong>
+            </p>
+            <ul>
+                  <li>Identify the Concept and Significance:
+                    <ul>
+                      <li>Understand the fundamental concept of Remote Desktop Protocol (RDP) exploitation.</li>
+                      <li>Recognize the critical significance of this technique in the context of data breaches.</li>
+                      <li>Gain Insights into Attackers' Tactics and Objectives.</li>
+                    </ul>
+                  </li>
+                  <li>Methods of Remote Desktop Protocol (RDP) exploitation:
+                    <ul>
+                      <li>Explore the various methods employed by cybercriminals to infiltrate and steal data from compromised systems.</li>
+                      <li>Understand the techniques used to transfer stolen data through Remote Desktop Protocol (RDP) exploitation.</li>
+                      <li>Examine real-world examples to illustrate how attackers utilize this method to compromise financial institutions' security.</li>
+                    </ul>
+                  </li>
+                  <li>Implications and Consequences:
+                    <ul>
+                      <li>Comprehend the potential ramifications of Remote Desktop Protocol (RDP) exploitation for fintech organizations.</li>
+                      <li>Analyze the financial and reputational damage that can result from successful exploitation of this technique.</li>
+                      <li>Explore case studies highlighting the impact of this technique on fintech institutions, their stakeholders, and the broader financial ecosystem.</li>
+                    </ul>
+                  </li>
+                  <li>Real-world Examples and Case Studies:
+                    <ul>
+                      <li>Gain practical insights into actual incidents of Remote Desktop Protocol (RDP) exploitation within the fintech industry.</li>
+                      <li>Study specific cases where cybercriminals successfully used this technique to breach financial organizations.</li>
+                      <li>Understand the tactics and strategies employed by attackers to remain undetected and evade security measures.</li>
+                    </ul>
+                  </li>
+                  <li>Detection and Prevention Strategies:
+                    <ul>
+                      <li>Explore comprehensive methodologies for detecting Remote Desktop Protocol (RDP) exploitation.</li>
+                      <li>Acquire knowledge of advanced tools and technologies that aid in the detection and prevention of this technique.</li>
+                    </ul>
+                  </li> 
+            </ul>
+            <p>
+                <strong>Now, let's delve into the details of Remote Desktop Protocol (RDP) exploitation</strong>
+            </p>
+            
+            <div id="next-button-container5">
+                <button id="next-button5">Next</button>
+            </div>
+    
+        </div>
+        
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Contact us: keptech@gmail.com</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+    <script>
+        // JavaScript to show/hide course sections
+        function toggleHome() {
+        var homeContent = document.getElementById("home-content");
+        var newsContainer = document.getElementById("news-container");
+        var news1Container = document.getElementById("news1-container");
+        var news2Container = document.getElementById("container2");
+        var news3Container = document.getElementById("container3");
+        var news4Container = document.getElementById("container4");
+        var news5Container = document.getElementById("container5");
+        homeContent.style.display = "";
+        news2Container.style.display = 'none';
+        newsContainer.style.display = 'none';
+        news1Container.style.display = 'none';
+        news3Container.style.display = 'none';
+        news4Container.style.display = 'none';
+        news5Container.style.display = 'none';
+        }
+
+        function toggleNews() {
+        var homeContent = document.getElementById("home-content");
+        var newsContainer = document.getElementById("news-container");
+        var news2Container = document.getElementById("container2");
+        var news3Container = document.getElementById("container3");
+        var news4Container = document.getElementById("container4");
+        var news5Container = document.getElementById("container5");
+        homeContent.style.display = "none";
+        newsContainer.style.display = '';
+        news2Container.style.display = 'none';
+        news3Container.style.display = 'none';
+        news4Container.style.display = 'none';
+        news5Container.style.display = 'none';
+      }
+
+      function toggleContainer2() {
+        var homeContent = document.getElementById("home-content");
+        var newsContainer = document.getElementById("news-container");
+        var news2Container = document.getElementById("container2");
+        var news3Container = document.getElementById("container3");
+        var news4Container = document.getElementById("container4");
+        var news5Container = document.getElementById("container5");
+        homeContent.style.display = "none";
+        newsContainer.style.display = 'none';
+        news2Container.style.display = '';
+        news3Container.style.display = 'none';
+        news4Container.style.display = 'none';
+        news5Container.style.display = 'none';
+      }
+
+      function toggleContainer3() {
+        var homeContent = document.getElementById("home-content");
+        var newsContainer = document.getElementById("news-container");
+        var news2Container = document.getElementById("container2");
+        var news3Container = document.getElementById("container3");
+        var news4Container = document.getElementById("container4");
+        var news5Container = document.getElementById("container5");
+        homeContent.style.display = "none";
+        newsContainer.style.display = 'none';
+        news2Container.style.display = 'none';
+        news3Container.style.display = '';
+        news4Container.style.display = 'none';
+        news5Container.style.display = 'none';
+      }
+
+      function toggleContainer4() {
+        var homeContent = document.getElementById("home-content");
+        var newsContainer = document.getElementById("news-container");
+        var news2Container = document.getElementById("container2");
+        var news3Container = document.getElementById("container3");
+        var news4Container = document.getElementById("container4");
+        var news5Container = document.getElementById("container5");
+        homeContent.style.display = "none";
+        newsContainer.style.display = 'none';
+        news2Container.style.display = 'none';
+        news3Container.style.display = 'none';
+        news4Container.style.display = '';
+        news5Container.style.display = 'none';
+      }
+
+      function toggleContainer5() {
+        var homeContent = document.getElementById("home-content");
+        var newsContainer = document.getElementById("news-container");
+        var news2Container = document.getElementById("container2");
+        var news3Container = document.getElementById("container3");
+        var news4Container = document.getElementById("container4");
+        var news5Container = document.getElementById("container5");
+        homeContent.style.display = "none";
+        newsContainer.style.display = 'none';
+        news2Container.style.display = 'none';
+        news3Container.style.display = 'none';
+        news4Container.style.display = 'none';
+        news5Container.style.display = '';
+      }
+
+      function showNextCourse() {
+        var newsContainer = document.getElementById("news-container");
+        var news1Container = document.getElementById("news1-container");
+        newsContainer.style.display = "none";
+        news1Container.style.display = '';
+      }
+
+        document.getElementById("next-button").addEventListener("click", function() {
+            window.location.href = "E&c.html";
+        });
+        document.getElementById("next-button2").addEventListener("click", function() {
+            window.location.href = "second.html";
+        });
+        document.getElementById("next-button3").addEventListener("click", function() {
+            window.location.href = "third.html";
+        });
+        document.getElementById("next-button4").addEventListener("click", function() {
+            window.location.href = "fourth.html";
+        });
+        document.getElementById("next-button5").addEventListener("click", function() {
+            window.location.href = "fifth.html";
+        });
+    </script>
+
+    
+</body>
+</html>
