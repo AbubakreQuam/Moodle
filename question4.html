@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+  }
+  .page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .question {
+    margin-bottom: 20px;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+  }
+  .summary {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .summary h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333333;
+  }
+  .summary p {
+    font-size: 18px;
+    color: #666666;
+  }
+  .perfect-score {
+    background-color: #33CC33;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .good-score {
+    background-color: #FFCC33;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .average-score {
+    background-color: #FF6633;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+</style>
+</head>
+<body>
+<div class="page" id="quiz">
+    <!-- Quiz Questions and Options -->
+    <div class="question">
+        <p>1. What is the primary goal of a Spearphishing Attachment attack?</p>
+        <input type="radio" name="q4" value="a"> a) Enhancing email delivery speed<br>
+        <input type="radio" name="q4" value="b"> b) Manipulating network infrastructure<br>
+        <input type="radio" name="q4" value="c"> c) Compromising sensitive data through malicious attachments<br>
+        <input type="radio" name="q4" value="d"> d) Improving employee communication<br>
+        <input type="hidden" name="correctQ4" value="c">
+    </div>
+
+    <div class="question">
+        <p>2. Why is understanding the tactics used by attackers in Spearphishing Attachment attacks crucial?</p>
+        <input type="radio" name="q5" value="a"> a) To increase email deliverability<br>
+        <input type="radio" name="q5" value="b"> b) To enhance internal communication<br>
+        <input type="radio" name="q5" value="c"> c) To identify irrelevant emails<br>
+        <input type="radio" name="q5" value="d"> d) To recognize potential threats and implement effective countermeasures<br>
+        <input type="hidden" name="correctQ5" value="d">
+    </div>
+
+    <div class="question">
+        <p>3. How do attackers personalize Spearphishing Attachment emails to deceive recipients?</p>
+        <input type="radio" name="q6" value="a"> a) By using generic email templates<br>
+        <input type="radio" name="q6" value="b"> b) By crafting emails with random content<br>
+        <input type="radio" name="q6" value="c"> c) By using attachments without any context<br>
+        <input type="radio" name="q6" value="d"> d) By tailoring content relevant to the recipient's interests or roles<br>
+        <input type="hidden" name="correctQ6" value="d">
+    </div>
+
+    <div class="question">
+        <p>4. What is the purpose of email spoofing in Spearphishing Attachment attacks?</p>
+        <input type="radio" name="q7" value="a"> a) To block legitimate emails<br>
+        <input type="radio" name="q7" value="b"> b) To send emails with excessive attachments<br>
+        <input type="radio" name="q7" value="c"> c) To impersonate trusted sources and deceive recipients<br>
+        <input type="radio" name="q7" value="d"> d) To redirect email traffic to malicious servers<br>
+        <input type="hidden" name="correctQ7" value="c">
+    </div>
+
+    <div class="question">
+        <p>5. How can malicious attachments in Spearphishing attacks compromise a recipient's system?</p>
+        <input type="radio" name="q8" value="a"> a) By redirecting email traffic<br>
+        <input type="radio" name="q8" value="b"> b) By encrypting the recipient's data<br>
+        <input type="radio" name="q8" value="c"> c) By extracting sensitive information from the recipient's system<br>
+        <input type="radio" name="q8" value="d"> d) By executing malware on the recipient's system<br>
+        <input type="hidden" name="correctQ8" value="d">
+    </div>
+
+    <div class="question">
+        <p>6. In what way does social engineering play a role in Spearphishing Attachment attacks?</p>
+        <input type="radio" name="q9" value="a"> a) By manipulating physical security measures<br>
+        <input type="radio" name="q9" value="b"> b) By targeting only senior employees<br>
+        <input type="radio" name="q9" value="c"> c) By exploiting human psychology to deceive recipients<br>
+        <input type="radio" name="q9" value="d"> d) By using advanced encryption techniques<br>
+        <input type="hidden" name="correctQ9" value="c">
+    </div>
+
+    <div class="question">
+        <p>7. What can attackers achieve through successful Spearphishing Attachment attacks?</p>
+        <input type="radio" name="q10" value="a"> a) Network optimization<br>
+        <input type="radio" name="q10" value="b"> b) Enhanced employee morale<br>
+        <input type="radio" name="q10" value="c"> c) Infiltration of the organization, data theft, and potential control over critical systems<br>
+        <input type="radio" name="q10" value="d"> d) Improved customer engagement<br>
+        <input type="hidden" name="correctQ10" value="c">
+    </div>
+
+    <div class="question">
+        <p>8. How did attackers exploit the SWIFT payment system in the real-world example mentioned?</p>
+        <input type="radio" name="q11" value="a"> a) By sending phishing emails with attachments unrelated to finances<br>
+        <input type="radio" name="q11" value="b"> b) By manipulating financial reports<br>
+        <input type="radio" name="q11" value="c"> c) By using Spearphishing Attachment emails to steal credentials and initiate fraudulent transactions<br>
+        <input type="radio" name="q11" value="d"> d) By launching distributed denial-of-service (DDoS) attacks<br>
+        <input type="hidden" name="correctQ11" value="c">
+    </div>
+
+    <div class="question">
+        <p>9. What is a crucial element of preventing Spearphishing Attachment attacks?</p>
+        <input type="radio" name="q12" value="a"> a) Regularly deleting all emails with attachments<br>
+        <input type="radio" name="q12" value="b"> b) Ignoring email security protocols<br>
+        <input type="radio" name="q12" value="c"> c) Educating employees to recognize suspicious emails<br>
+        <input type="radio" name="q12" value="d"> d) Increasing the number of email attachments<br>
+        <input type="hidden" name="correctQ12" value="c">
+    </div>
+
+    <div class="question">
+        <p>10. How can advanced email security solutions contribute to mitigating Spearphishing Attachment attacks?</p>
+        <input type="radio" name="q13" value="a"> a) By blocking all incoming emails<br>
+        <input type="radio" name="q13" value="b"> b) By providing real-time analysis of attachments and URLs<br>
+        <input type="radio" name="q13" value="c"> c) By automatically opening all attachments<br>
+        <input type="radio" name="q13" value="d"> d) By redirecting emails to a third-party service<br>
+        <input type="hidden" name="correctQ13" value="b">
+    </div>
+
+
+
+
+
+  <button class="btn" onclick="submitQuiz()">Submit</button>
+</div>
+
+<div class="summary" id="summary" style="display: none; margin-top: 5%;">
+  
+  <!-- Summary content will be added dynamically -->
+</div>
+
+<script>
+  // ... JavaScript code ...
+  document.getElementById("home-btn").addEventListener("click", function() {
+            window.location.href = "index.html";
+        });
+
+  function submitQuiz() {
+    const questions = document.querySelectorAll('.question');
+    let score = 0;
+
+    questions.forEach(question => {
+      const selectedOption = question.querySelector('input[name^="q"]:checked');
+      const correctOption = question.querySelector('input[name^="correctQ"]').value;
+
+      if (selectedOption && selectedOption.value === correctOption) {
+        score++;
+      }
+    });
+
+    const quizContainer = document.getElementById('quiz');
+    quizContainer.style.display = 'none';
+
+    const summary = document.getElementById('summary');
+    let summaryContent = `<h2>Quiz Summary</h2>`;
+
+    if (score === 0) {
+        isAllAnswered = false;
+        alert("Please answer all questions before submitting.");
+        quizContainer.style.display = "block";
+        return;
+    }
+    
+    else{
+      if (score === questions.length) {
+      summaryContent += `<p>Congratulations! You scored ${score} out of ${questions.length}. You've got a perfect score. Keep up the excellent work!</p>`;
+    } else if (score >= Math.floor(questions.length / 2)) {
+      summaryContent += `<p>Great job! You scored ${score} out of ${questions.length}. You're on the right track. Keep learning and improving!</p>`;
+    } else {
+      summaryContent += `<p>You scored ${score} out of ${questions.length}. Don't worry, practice makes perfect. Keep studying and you'll improve!</p>`;
+    }
+    
+    summary.innerHTML = summaryContent;
+    summary.style.display = 'block';
+    }
+    
+  }
+</script>
+</body>
+</html>

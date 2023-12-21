@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+  }
+  .page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .question {
+    margin-bottom: 20px;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+  }
+  .summary {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .summary h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333333;
+  }
+  .summary p {
+    font-size: 18px;
+    color: #666666;
+  }
+  .perfect-score {
+    background-color: #33CC33;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .good-score {
+    background-color: #FFCC33;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .average-score {
+    background-color: #FF6633;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+</style>
+</head>
+<body>
+<div class="page" id="quiz">
+    <!-- Quiz Questions and Options -->
+    <div class="question">
+        <p>1. What is the primary focus of this e-learning course?</p>
+        <input type="radio" name="q1" value="a"> a) Understanding software vulnerabilities<br>
+        <input type="radio" name="q1" value="b"> b) Preventing data breaches in fintech<br>
+        <input type="radio" name="q1" value="c"> c) Exploring various cyber threats<br>
+        <input type="radio" name="q1" value="d"> d) Investigating network configurations<br>
+        <input type="hidden" name="correctQ1" value="b">
+    </div>
+
+    <div class="question">
+        <p>2. How does exfiltration over Command and Control (C&C) channels work?</p>
+        <input type="radio" name="q2" value="a"> a) By physically stealing devices<br>
+        <input type="radio" name="q2" value="b"> b) Through social engineering only<br>
+        <input type="radio" name="q2" value="c"> c) By using encrypted communication<br>
+        <input type="radio" name="q2" value="d"> d) Through remote control of compromised systems<br>
+        <input type="hidden" name="correctQ2" value="d">
+    </div>
+
+    <div class="question">
+        <p>3. What are the aims of this course in relation to understanding exfiltration over C&C channels?</p>
+        <input type="radio" name="q3" value="a"> a) Analyzing financial markets<br>
+        <input type="radio" name="q3" value="b"> b) Exploring fintech regulations<br>
+        <input type="radio" name="q3" value="c"> c) Understanding cyber insurance<br>
+        <input type="radio" name="q3" value="d"> d) Providing insights into detection and prevention techniques<br>
+        <input type="hidden" name="correctQ3" value="d">
+    </div>
+
+    <div class="question">
+        <p>4. Why is understanding methods of data theft important for preventing exfiltration over C&C channels?</p>
+        <input type="radio" name="q4" value="a"> a) To increase network speed<br>
+        <input type="radio" name="q4" value="b"> b) To improve user experience<br>
+        <input type="radio" name="q4" value="c"> c) To identify potential vulnerabilities and mitigate risks<br>
+        <input type="radio" name="q4" value="d"> d) To promote open-source software<br>
+        <input type="hidden" name="correctQ4" value="c">
+    </div>
+
+    <div class="question">
+        <p>5. How can cybercriminals exploit software vulnerabilities and network configurations?</p>
+        <input type="radio" name="q5" value="a"> a) By increasing employee salaries<br>
+        <input type="radio" name="q5" value="b"> b) By using legal methods only<br>
+        <input type="radio" name="q5" value="c"> c) By conducting regular security audits<br>
+        <input type="radio" name="q5" value="d"> d) By identifying weaknesses and using them to gain unauthorized access<br>
+        <input type="hidden" name="correctQ5" value="d">
+    </div>
+
+        <!-- Question 6 -->
+    <div class="question">
+        <p>6. What role does transferring stolen data through C&C channels play in cyberattacks?</p>
+        <input type="radio" name="q6" value="a"> a) It doesn't play any role<br>
+        <input type="radio" name="q6" value="b"> b) It helps improve network security<br>
+        <input type="radio" name="q6" value="c"> c) It allows cybercriminals to control compromised systems and steal sensitive data<br>
+        <input type="radio" name="q6" value="d"> d) It only affects personal computers<br>
+        <input type="hidden" name="correctQ6" value="c">
+    </div>
+
+    <!-- Question 7 -->
+    <div class="question">
+        <p>7. Why is data breach a significant consequence of exfiltration over C&C channels?</p>
+        <input type="radio" name="q7" value="a"> a) It leads to faster data transfers<br>
+        <input type="radio" name="q7" value="b"> b) It exposes sensitive information to unauthorized individuals<br>
+        <input type="radio" name="q7" value="c"> c) It improves data encryption<br>
+        <input type="radio" name="q7" value="d"> d) It only affects large organizations<br>
+        <input type="hidden" name="correctQ7" value="b">
+    </div>
+
+    <!-- Question 8 -->
+    <div class="question">
+        <p>8. What potential financial impact can result from the successful exploitation of this technique?</p>
+        <input type="radio" name="q8" value="a"> a) No financial impact<br>
+        <input type="radio" name="q8" value="b"> b) Increased profits for fintech companies<br>
+        <input type="radio" name="q8" value="c"> c) Loss of revenue, legal fees, and reputational damage<br>
+        <input type="radio" name="q8" value="d"> d) Lower taxes for affected organizations<br>
+        <input type="hidden" name="correctQ8" value="c">
+    </div>
+
+    <!-- Question 9 -->
+    <div class="question">
+        <p>9. How might exfiltration over C&C channels affect the reputation of fintech organizations?</p>
+        <input type="radio" name="q9" value="a"> a) It doesn't affect reputation<br>
+        <input type="radio" name="q9" value="b"> b) It may lead to increased trust from customers<br>
+        <input type="radio" name="q9" value="c"> c) It can significantly damage trust and credibility<br>
+        <input type="radio" name="q9" value="d"> d) It only affects small fintech startups<br>
+        <input type="hidden" name="correctQ9" value="c">
+    </div>
+
+    <!-- Question 10 -->
+    <div class="question">
+        <p>10. What regulatory and legal consequences could fintech organizations face due to this cyber threat?</p>
+        <input type="radio" name="q10" value="a"> a) No consequences<br>
+        <input type="radio" name="q10" value="b"> b) Possible tax breaks<br>
+        <input type="radio" name="q10" value="c"> c) Regulatory fines, legal actions, and compliance challenges<br>
+        <input type="radio" name="q10" value="d"> d) Exemption from cybersecurity regulations<br>
+        <input type="hidden" name="correctQ10" value="c">
+    </div>
+
+        <!-- Question 11 -->
+    <div class="question">
+        <p>11. Can you provide an example of a real-world incident involving exfiltration over C&C channels in the fintech industry?</p>
+        <input type="radio" name="q11" value="a"> a) There are no such incidents<br>
+        <input type="radio" name="q11" value="b"> b) The Enron scandal<br>
+        <input type="radio" name="q11" value="c"> c) The Equifax data breach<br>
+        <input type="radio" name="q11" value="d"> d) A fictional story<br>
+        <input type="hidden" name="correctQ11" value="c">
+    </div>
+
+    <!-- Question 12 -->
+    <div class="question">
+        <p>12. How did the Equifax data breach impact the organization and its stakeholders?</p>
+        <input type="radio" name="q12" value="a"> a) No impact on stakeholders<br>
+        <input type="radio" name="q12" value="b"> b) Financial losses, erosion of trust, and lawsuits<br>
+        <input type="radio" name="q12" value="c"> c) Improved data security measures<br>
+        <input type="radio" name="q12" value="d"> d) Equifax became the most profitable company<br>
+        <input type="hidden" name="correctQ12" value="b">
+    </div>
+
+    <!-- Question 13 -->
+    <div class="question">
+        <p>13. In the Capital One breach case, how did the cybercriminal gain access to customer data?</p>
+        <input type="radio" name="q13" value="a"> a) They used a magic spell<br>
+        <input type="radio" name="q13" value="b"> b) Exploiting a misconfigured web application firewall<br>
+        <input type="radio" name="q13" value="c"> c) They asked nicely<br>
+        <input type="radio" name="q13" value="d"> d) The data was given voluntarily by customers<br>
+        <input type="hidden" name="correctQ13" value="b">
+    </div>
+
+    <!-- Question 14 -->
+    <div class="question">
+        <p>14. What were the consequences of the Uber data breach, both for the company and its users?</p>
+        <input type="radio" name="q14" value="a"> a) No consequences for either party<br>
+        <input type="radio" name="q14" value="b"> b) Legal actions, loss of trust, and data privacy concerns<br>
+        <input type="radio" name="q14" value="c"> c) Improved user experience<br>
+        <input type="radio" name="q14" value="d"> d) Higher stock prices for Uber<br>
+        <input type="hidden" name="correctQ14" value="b">
+    </div>
+
+    <!-- Question 15 -->
+    <div class="question">
+        <p>15. How do case studies help us better understand the impact of exfiltration over C&C channels on financial organizations?</p>
+        <input type="radio" name="q15" value="a"> a) They don't provide any useful information<br>
+        <input type="radio" name="q15" value="b"> b) Case studies offer real-world examples that illustrate vulnerabilities, consequences, and lessons learned<br>
+        <input type="radio" name="q15" value="c"> c) Case studies are only meant for entertainment<br>
+        <input type="radio" name="q15" value="d"> d) Case studies are irrelevant in the field of cybersecurity<br>
+        <input type="hidden" name="correctQ15" value="b">
+    </div>
+
+
+  <button class="btn" onclick="submitQuiz()">Submit</button>
+</div>
+
+<div class="summary" id="summary" style="display: none; margin-top: 5%;">
+  
+  <!-- Summary content will be added dynamically -->
+</div>
+
+<script>
+  // ... JavaScript code ...
+  document.getElementById("home-btn").addEventListener("click", function() {
+            window.location.href = "index.html";
+        });
+
+  function submitQuiz() {
+    const questions = document.querySelectorAll('.question');
+    let score = 0;
+
+    questions.forEach(question => {
+      const selectedOption = question.querySelector('input[name^="q"]:checked');
+      const correctOption = question.querySelector('input[name^="correctQ"]').value;
+
+      if (selectedOption && selectedOption.value === correctOption) {
+        score++;
+      }
+    });
+
+    const quizContainer = document.getElementById('quiz');
+    quizContainer.style.display = 'none';
+
+    const summary = document.getElementById('summary');
+    let summaryContent = `<h2>Quiz Summary</h2>`;
+
+    if (score === 0) {
+        isAllAnswered = false;
+        alert("Please answer all questions before submitting.");
+        quizContainer.style.display = "block";
+        return;
+    }
+    
+    else{
+      if (score === questions.length) {
+      summaryContent += `<p>Congratulations! You scored ${score} out of ${questions.length}. You've got a perfect score. Keep up the excellent work!</p>`;
+    } else if (score >= Math.floor(questions.length / 2)) {
+      summaryContent += `<p>Great job! You scored ${score} out of ${questions.length}. You're on the right track. Keep learning and improving!</p>`;
+    } else {
+      summaryContent += `<p>You scored ${score} out of ${questions.length}. Don't worry, practice makes perfect. Keep studying and you'll improve!</p>`;
+    }
+    
+    summary.innerHTML = summaryContent;
+    summary.style.display = 'block';
+    }
+    
+  }
+</script>
+</body>
+</html>

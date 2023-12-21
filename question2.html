@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+  }
+  .page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .question {
+    margin-bottom: 20px;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+  }
+  .summary {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .summary h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333333;
+  }
+  .summary p {
+    font-size: 18px;
+    color: #666666;
+  }
+  .perfect-score {
+    background-color: #33CC33;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .good-score {
+    background-color: #FFCC33;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .average-score {
+    background-color: #FF6633;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+</style>
+</head>
+<body>
+<div class="page" id="quiz">
+    <!-- Quiz Questions and Options -->
+    <div class="question">
+        <p>1. What is the essence of automated collection in cyberattacks?</p>
+        <input type="radio" name="q1" value="a"> a) Manual extraction of data<br>
+        <input type="radio" name="q1" value="b"> b) Human intervention in data gathering<br>
+        <input type="radio" name="q1" value="c"> c) Automated tools and algorithms gathering data<br>
+        <input type="radio" name="q1" value="d"> d) Randomized data collection<br>
+        <input type="hidden" name="correctQ1" value="c">
+    </div>
+    
+    <div class="question">
+        <p>2. Why is understanding automated collection significant for fintech security?</p>
+        <input type="radio" name="q2" value="a"> a) It boosts customer engagement<br>
+        <input type="radio" name="q2" value="b"> b) It reduces regulatory penalties<br>
+        <input type="radio" name="q2" value="c"> c) It reveals a vulnerability in security<br>
+        <input type="radio" name="q2" value="d"> d) It enhances data encryption<br>
+        <input type="hidden" name="correctQ2" value="c">
+    </div>
+    
+    <div class="question">
+        <p>3. How do cybercriminals benefit from automated collection techniques?</p>
+        <input type="radio" name="q3" value="a"> a) They create manual data reports<br>
+        <input type="radio" name="q3" value="b"> b) They enhance physical security<br>
+        <input type="radio" name="q3" value="c"> c) They exploit efficiency and scale<br>
+        <input type="radio" name="q3" value="d"> d) They increase human intervention<br>
+        <input type="hidden" name="correctQ3" value="c">
+    </div>
+    
+    <div class="question">
+        <p>4. Which of the following best describes the concept of data scraping?</p>
+        <input type="radio" name="q4" value="a"> a) Encrypting sensitive data at rest<br>
+        <input type="radio" name="q4" value="b"> b) Intercepting data transmitted between devices<br>
+        <input type="radio" name="q4" value="c"> c) Extracting data through automated scripts from websites<br>
+        <input type="radio" name="q4" value="d"> d) Gathering data through direct human intervention<br>
+        <input type="hidden" name="correctQ4" value="c">
+    </div>
+    
+    <div class="question">
+        <p>5. How does multi-factor authentication mitigate the risk of automated attacks?</p>
+        <input type="radio" name="q5" value="a"> a) It encrypts data in transit<br>
+        <input type="radio" name="q5" value="b"> b) It limits access to authorized personnel<br>
+        <input type="radio" name="q5" value="c"> c) It detects anomalies in system behavior<br>
+        <input type="radio" name="q5" value="d"> d) It prevents unauthorized financial transactions<br>
+        <input type="hidden" name="correctQ5" value="b">
+    </div>
+    
+    <div class="question">
+        <p>6. What role do APIs play in automated data collection?</p>
+        <input type="radio" name="q6" value="a"> a) They provide encryption keys<br>
+        <input type="radio" name="q6" value="b"> b) They facilitate data exchange between systems<br>
+        <input type="radio" name="q6" value="c"> c) They create data visualization reports<br>
+        <input type="radio" name="q6" value="d"> d) They enhance physical security measures<br>
+        <input type="hidden" name="correctQ6" value="b">
+    </div>
+    
+    <div class="question">
+        <p>7. Which technique involves sending automated requests to extract sensitive data?</p>
+        <input type="radio" name="q7" value="a"> a) Data interception<br>
+        <input type="radio" name="q7" value="b"> b) Data crawling<br>
+        <input type="radio" name="q7" value="c"> c) API abuse<br>
+        <input type="radio" name="q7" value="d"> d) Credential stuffing<br>
+        <input type="hidden" name="correctQ7" value="c">
+    </div>
+    
+    <div class="question">
+        <p>8. What could be the result of a breach due to automated data collection?</p>
+        <input type="radio" name="q8" value="a"> a) Improved customer engagement<br>
+        <input type="radio" name="q8" value="b"> b) Enhanced brand image<br>
+        <input type="radio" name="q8" value="c"> c) Catastrophic consequences for the company<br>
+        <input type="radio" name="q8" value="d"> d) Increased profits for cybercriminals<br>
+        <input type="hidden" name="correctQ8" value="c">
+    </div>
+    
+    <div class="question">
+        <p>9. What is a countermeasure to prevent automated collection attempts?</p>
+        <input type="radio" name="q9" value="a"> a) Sharing decryption keys publicly<br>
+        <input type="radio" name="q9" value="b"> b) Limiting access to authorized personnel<br>
+        <input type="radio" name="q9" value="c"> c) Ignoring software updates<br>
+        <input type="radio" name="q9" value="d"> d) Avoiding threat intelligence feeds<br>
+        <input type="hidden" name="correctQ9" value="b">
+    </div>
+    
+    <div class="question">
+        <p>10. What does UEBA monitor to detect anomalies in automated attacks?</p>
+        <input type="radio" name="q10" value="a"> a) User and entity behaviors<br>
+        <input type="radio" name="q10" value="b"> b) Web application firewalls<br>
+        <input type="radio" name="q10" value="c"> c) Encryption keys<br>
+        <input type="radio" name="q10" value="d"> d) Malware signatures<br>
+        <input type="hidden" name="correctQ10" value="a">
+    </div>
+    
+
+  <button class="btn" onclick="submitQuiz()">Submit</button>
+</div>
+
+<div class="summary" id="summary" style="display: none; margin-top: 5%;">
+  
+  <!-- Summary content will be added dynamically -->
+</div>
+
+<script>
+  // ... JavaScript code ...
+  document.getElementById("home-btn").addEventListener("click", function() {
+            window.location.href = "index.html";
+        });
+
+  function submitQuiz() {
+    const questions = document.querySelectorAll('.question');
+    let score = 0;
+
+    questions.forEach(question => {
+      const selectedOption = question.querySelector('input[name^="q"]:checked');
+      const correctOption = question.querySelector('input[name^="correctQ"]').value;
+
+      if (selectedOption && selectedOption.value === correctOption) {
+        score++;
+      }
+    });
+
+    const quizContainer = document.getElementById('quiz');
+    quizContainer.style.display = 'none';
+
+    const summary = document.getElementById('summary');
+    let summaryContent = `<h2>Quiz Summary</h2>`;
+
+    if (score === 0) {
+        isAllAnswered = false;
+        alert("Please answer all questions before submitting.");
+        quizContainer.style.display = "block";
+        return;
+    }
+    
+    else{
+      if (score === questions.length) {
+      summaryContent += `<p>Congratulations! You scored ${score} out of ${questions.length}. You've got a perfect score. Keep up the excellent work!</p>`;
+    } else if (score >= Math.floor(questions.length / 2)) {
+      summaryContent += `<p>Great job! You scored ${score} out of ${questions.length}. You're on the right track. Keep learning and improving!</p>`;
+    } else {
+      summaryContent += `<p>You scored ${score} out of ${questions.length}. Don't worry, practice makes perfect. Keep studying and you'll improve!</p>`;
+    }
+    
+    summary.innerHTML = summaryContent;
+    summary.style.display = 'block';
+    }
+    
+  }
+</script>
+</body>
+</html>

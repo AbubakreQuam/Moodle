@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+  }
+  .page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .question{
+    margin-bottom: 20px;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+  }
+  .summary {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .summary h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333333;
+  }
+  .summary p {
+    font-size: 18px;
+    color: #666666;
+  }
+  .perfect-score {
+    background-color: #33CC33;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .good-score {
+    background-color: #FFCC33;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .average-score {
+    background-color: #FF6633;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+</style>
+</head>
+<body>
+<div class="page" id="quiz">
+    <!-- Quiz Questions and Options -->
+
+    <div class="question">
+        <p>1. What is the main objective of exploiting public-facing applications?</p>
+        <input type="radio" name="q1" value="a"> a) Enhancing user experience<br>
+        <input type="radio" name="q1" value="b"> b) Gaining unauthorized access to data<br>
+        <input type="radio" name="q1" value="c"> c) Increasing application speed<br>
+        <input type="radio" name="q1" value="d"> d) Improving customer support<br>
+        <input type="hidden" name="correctQ1" value="b">
+    </div>
+
+    <div class="question">
+        <p>2. Why is understanding the implications of exploiting public-facing applications crucial for fintech security?</p>
+        <input type="radio" name="q2" value="a"> a) It improves customer engagement<br>
+        <input type="radio" name="q2" value="b"> b) It enhances internal communication<br>
+        <input type="radio" name="q2" value="c"> c) It identifies software vulnerabilities<br>
+        <input type="radio" name="q2" value="d"> d) It prevents regulatory fines<br>
+        <input type="hidden" name="correctQ2" value="c">
+    </div>
+
+    <div class="question">
+        <p>3. What is the main objective of exploiting public-facing applications?</p>
+        <input type="radio" name="q3" value="a"> a) Enhancing user experience<br>
+        <input type="radio" name="q3" value="b"> b) Gaining unauthorized access to data<br>
+        <input type="radio" name="q3" value="c"> c) Increasing application speed<br>
+        <input type="radio" name="q3" value="d"> d) Improving customer support<br>
+        <input type="hidden" name="correctQ3" value="b">
+    </div>
+
+    <div class="question">
+        <p>4. What is the primary purpose of Cross-Site Scripting (XSS) attacks?</p>
+        <input type="radio" name="q4" value="a"> a) Gaining unauthorized access to servers<br>
+        <input type="radio" name="q4" value="b"> b) Manipulating databases<br>
+        <input type="radio" name="q4" value="c"> c) Executing unintended commands<br>
+        <input type="radio" name="q4" value="d"> d) Stealing data or user sessions<br>
+        <input type="hidden" name="correctQ4" value="d">
+    </div>
+
+    <div class="question">
+        <p>5. What does a Cross-Site Request Forgery (CSRF) attack involve?</p>
+        <input type="radio" name="q5" value="a"> a) Injecting malicious code into web pages<br>
+        <input type="radio" name="q5" value="b"> b) Manipulating user inputs<br>
+        <input type="radio" name="q5" value="c"> c) Executing unintended commands<br>
+        <input type="radio" name="q5" value="d"> d) Tricking users into performing actions<br>
+        <input type="hidden" name="correctQ5" value="d">
+    </div>
+
+    <div class="question">
+        <p>6. What is the potential consequence of a successful exploit involving an authentication bypass?</p>
+        <input type="radio" name="q6" value="a"> a) Enhanced user experience<br>
+        <input type="radio" name="q6" value="b"> b) Improved application speed<br>
+        <input type="radio" name="q6" value="c"> c) Unauthorized access to user accounts<br>
+        <input type="radio" name="q6" value="d"> d) Increased customer engagement<br>
+        <input type="hidden" name="correctQ6" value="c">
+    </div>
+
+    <div class="question">
+        <p>7. How do attackers exploit file upload vulnerabilities?</p>
+        <input type="radio" name="q7" value="a"> a) By intercepting network traffic<br>
+        <input type="radio" name="q7" value="b"> b) By manipulating server encryption<br>
+        <input type="radio" name="q7" value="c"> c) By executing malicious code on the server<br>
+        <input type="radio" name="q7" value="d"> d) By tricking users into downloading files<br>
+        <input type="hidden" name="correctQ7" value="c">
+    </div>
+
+    <div class="question">
+        <p>8. What is the significance of the Equifax data breach mentioned in the teaching write-up?</p>
+        <input type="radio" name="q8" value="a"> a) It exposed vulnerabilities in social media platforms<br>
+        <input type="radio" name="q8" value="b"> b) It compromised sensitive data in a hotel chain<br>
+        <input type="radio" name="q8" value="c"> c) It highlighted the risks of exploiting public-facing applications<br>
+        <input type="radio" name="q8" value="d"> d) It targeted a government agency's online portal<br>
+        <input type="hidden" name="correctQ8" value="c">
+    </div>
+
+    <div class="question">
+        <p>9. Which strategy can help prevent exploitation of public-facing applications?</p>
+        <input type="radio" name="q9" value="a"> a) Ignoring software updates<br>
+        <input type="radio" name="q9" value="b"> b) Implementing security measures during development<br>
+        <input type="radio" name="q9" value="c"> c) Removing authentication mechanisms<br>
+        <input type="radio" name="q9" value="d"> d) Deploying outdated web application firewalls<br>
+        <input type="hidden" name="correctQ9" value="b">
+    </div>
+
+    <div class="question">
+        <p>10. How can behavioral analysis assist in detecting exploitation attempts?</p>
+        <input type="radio" name="q10" value="a"> a) By encrypting data at rest<br>
+        <input type="radio" name="q10" value="b"> b) By identifying patterns indicative of attacks<br>
+        <input type="radio" name="q10" value="c"> c) By blocking incoming traffic<br>
+        <input type="radio" name="q10" value="d"> d) By monitoring server performance<br>
+        <input type="hidden" name="correctQ10" value="b">
+    </div>
+
+  <button class="btn" onclick="submitQuiz()">Submit</button>
+</div>
+
+<div class="summary" id="summary" style="display: none; margin-top: 5%;">
+  
+  <!-- Summary content will be added dynamically -->
+</div>
+
+<script>
+  // ... JavaScript code ...
+  document.getElementById("home-btn").addEventListener("click", function() {
+            window.location.href = "index.html";
+        });
+
+  function submitQuiz() {
+    const questions = document.querySelectorAll('.question');
+    let score = 0;
+
+    questions.forEach(question => {
+      const selectedOption = question.querySelector('input[name^="q"]:checked');
+      const correctOption = question.querySelector('input[name^="correctQ"]').value;
+
+      if (selectedOption && selectedOption.value === correctOption) {
+        score++;
+      }
+    });
+
+    const quizContainer = document.getElementById('quiz');
+    quizContainer.style.display = 'none';
+
+    const summary = document.getElementById('summary');
+    let summaryContent = `<h2>Quiz Summary</h2>`;
+
+    if (score === 0) {
+        isAllAnswered = false;
+        alert("Please answer all questions before submitting.");
+        quizContainer.style.display = "block";
+        return;
+    }
+    
+    else{
+      if (score === questions.length) {
+      summaryContent += `<p>Congratulations! You scored ${score} out of ${questions.length}. You've got a perfect score. Keep up the excellent work!</p>`;
+    } else if (score >= Math.floor(questions.length / 2)) {
+      summaryContent += `<p>Great job! You scored ${score} out of ${questions.length}. You're on the right track. Keep learning and improving!</p>`;
+    } else {
+      summaryContent += `<p>You scored ${score} out of ${questions.length}. Don't worry, practice makes perfect. Keep studying and you'll improve!</p>`;
+    }
+    
+    summary.innerHTML = summaryContent;
+    summary.style.display = 'block';
+    }
+    
+  }
+</script>
+</body>
+</html>

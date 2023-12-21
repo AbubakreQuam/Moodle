@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+  }
+  .page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .question {
+    margin-bottom: 20px;
+  }
+  .btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+  }
+  .summary {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .summary h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333333;
+  }
+  .summary p {
+    font-size: 18px;
+    color: #666666;
+  }
+  .perfect-score {
+    background-color: #33CC33;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .good-score {
+    background-color: #FFCC33;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .average-score {
+    background-color: #FF6633;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+</style>
+</head>
+<body>
+<div class="page" id="quiz">
+    <!-- Quiz Questions and Options -->
+    <div class="question">
+        <p>1. What is the primary purpose of Remote Desktop Protocol (RDP) Exploitation in cyberattacks?</p>
+        <input type="radio" name="q5" value="a"> a) Enhancing website security<br>
+        <input type="radio" name="q5" value="b"> b) Establishing a secure network connection<br>
+        <input type="radio" name="q5" value="c"> c) Infiltrating and compromising systems<br>
+        <input type="radio" name="q5" value="d"> d) Encrypting sensitive data<br>
+        <input type="hidden" name="correctQ5" value="c">
+    </div>
+    
+    <div class="question">
+        <p>2. Why is understanding the tactics used by attackers in RDP Exploitation important?</p>
+        <input type="radio" name="q6" value="a"> a) To improve network latency<br>
+        <input type="radio" name="q6" value="b"> b) To create secure backup copies<br>
+        <input type="radio" name="q6" value="c"> c) To recognize potential threats and implement effective countermeasures<br>
+        <input type="radio" name="q6" value="d"> d) To automate system updates<br>
+        <input type="hidden" name="correctQ6" value="c">
+    </div>
+    
+    <div class="question">
+        <p>3. Which of the following vulnerabilities is commonly targeted in RDP Exploitation attacks?</p>
+        <input type="radio" name="q7" value="a"> a) Strong and unique passwords<br>
+        <input type="radio" name="q7" value="b"> b) Multi-factor authentication<br>
+        <input type="radio" name="q7" value="c"> c) Misconfigured or unpatched RDP services<br>
+        <input type="radio" name="q7" value="d"> d) Complex encryption algorithms<br>
+        <input type="hidden" name="correctQ7" value="c">
+    </div>
+    
+    <div class="question">
+        <p>4. How do attackers gain unauthorized RDP access in brute force attacks?</p>
+        <input type="radio" name="q8" value="a"> a) By manipulating firewall rules<br>
+        <input type="radio" name="q8" value="b"> b) By exploiting zero-day vulnerabilities<br>
+        <input type="radio" name="q8" value="c"> c) By using automated tools to guess passwords<br>
+        <input type="radio" name="q8" value="d"> d) By physically accessing the target systems<br>
+        <input type="hidden" name="correctQ8" value="c">
+    </div>
+    
+    <div class="question">
+        <p>5. What is credential stuffing in the context of RDP Exploitation?</p>
+        <input type="radio" name="q9" value="a"> a) Stuffing physical credentials into server racks<br>
+        <input type="radio" name="q9" value="b"> b) Using stolen credentials from a data breach to attempt unauthorized RDP access<br>
+        <input type="radio" name="q9" value="c"> c) Stuffing encryption keys into RDP connections<br>
+        <input type="radio" name="q9" value="d"> d) Utilizing biometric data to gain RDP access<br>
+        <input type="hidden" name="correctQ9" value="b">
+    </div>
+    
+    <div class="question">
+        <p>6. How can attackers exploit unpatched systems in RDP Exploitation attacks?</p>
+        <input type="radio" name="q10" value="a"> a) By initiating distributed denial-of-service (DDoS) attacks<br>
+        <input type="radio" name="q10" value="b"> b) By infecting systems with malware to encrypt data<br>
+        <input type="radio" name="q10" value="c"> c) By utilizing spearphishing emails<br>
+        <input type="radio" name="q10" value="d"> d) By exploiting known vulnerabilities to gain unauthorized access<br>
+        <input type="hidden" name="correctQ10" value="d">
+    </div>
+    
+    <div class="question">
+        <p>7. What potential consequences can arise from successful RDP Exploitation attacks?</p>
+        <input type="radio" name="q11" value="a"> a) Improved network performance<br>
+        <input type="radio" name="q11" value="b"> b) Enhanced user experience<br>
+        <input type="radio" name="q11" value="c"> c) Unauthorized access to critical systems and data manipulation<br>
+        <input type="radio" name="q11" value="d"> d) Accelerated software development<br>
+        <input type="hidden" name="correctQ11" value="c">
+    </div>
+    
+    <div class="question">
+        <p>8. How does network segmentation contribute to mitigating RDP Exploitation risks?</p>
+        <input type="radio" name="q12" value="a"> a) By eliminating the need for strong passwords<br>
+        <input type="radio" name="q12" value="b"> b) By increasing network latency<br>
+        <input type="radio" name="q12" value="c"> c) By isolating critical systems from less critical ones<br>
+        <input type="radio" name="q12" value="d"> d) By preventing remote access altogether<br>
+        <input type="hidden" name="correctQ12" value="c">
+    </div>
+    
+    <div class="question">
+        <p>9. What is the primary goal of implementing intrusion detection systems (IDS) in RDP Exploitation prevention?</p>
+        <input type="radio" name="q13" value="a"> a) To slow down network traffic<br>
+        <input type="radio" name="q13" value="b"> b) To block all remote access attempts<br>
+        <input type="radio" name="q13" value="c"> c) To detect unusual or unauthorized RDP access patterns<br>
+        <input type="radio" name="q13" value="d"> d) To encrypt all data transfers<br>
+        <input type="hidden" name="correctQ13" value="c">
+    </div>
+    
+    <div class="question">
+        <p>10. How does user education contribute to preventing RDP Exploitation attacks?</p>
+        <input type="radio" name="q14" value="a"> a) By ensuring employees have the latest software updates<br>
+        <input type="radio" name="q14" value="b"> b) By encouraging employees to share passwords<br>
+        <input type="radio" name="q14" value="c"> c) By educating employees about secure remote access practices<br>
+        <input type="radio" name="q14" value="d"> d) By providing employees with direct RDP access<br>
+        <input type="hidden" name="correctQ14" value="c">
+    </div>
+
+    
+
+
+
+  <button class="btn" onclick="submitQuiz()">Submit</button>
+</div>
+
+<div class="summary" id="summary" style="display: none; margin-top: 5%;">
+  
+  <!-- Summary content will be added dynamically -->
+</div>
+
+<script>
+  // ... JavaScript code ...
+  document.getElementById("home-btn").addEventListener("click", function() {
+            window.location.href = "index.html";
+        });
+
+  function submitQuiz() {
+    const questions = document.querySelectorAll('.question');
+    let score = 0;
+
+    questions.forEach(question => {
+      const selectedOption = question.querySelector('input[name^="q"]:checked');
+      const correctOption = question.querySelector('input[name^="correctQ"]').value;
+
+      if (selectedOption && selectedOption.value === correctOption) {
+        score++;
+      }
+    });
+
+    const quizContainer = document.getElementById('quiz');
+    quizContainer.style.display = 'none';
+
+    const summary = document.getElementById('summary');
+    let summaryContent = `<h2>Quiz Summary</h2>`;
+
+    if (score === 0) {
+        isAllAnswered = false;
+        alert("Please answer all questions before submitting.");
+        quizContainer.style.display = "block";
+        return;
+    }
+    
+    else{
+      if (score === questions.length) {
+      summaryContent += `<p>Congratulations! You scored ${score} out of ${questions.length}. You've got a perfect score. Keep up the excellent work!</p>`;
+    } else if (score >= Math.floor(questions.length / 2)) {
+      summaryContent += `<p>Great job! You scored ${score} out of ${questions.length}. You're on the right track. Keep learning and improving!</p>`;
+    } else {
+      summaryContent += `<p>You scored ${score} out of ${questions.length}. Don't worry, practice makes perfect. Keep studying and you'll improve!</p>`;
+    }
+    
+    summary.innerHTML = summaryContent;
+    summary.style.display = 'block';
+    }
+    
+  }
+</script>
+</body>
+</html>
